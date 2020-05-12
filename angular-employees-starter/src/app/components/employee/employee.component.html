@@ -1,0 +1,25 @@
+<div>
+  <h1 class="h1 m-3">
+    Angular NgRx: Step By Step<br />
+    <small class="text-muted">
+      angular-employees-starter
+    </small>
+  </h1>
+  <div *ngIf="employees$"></div>
+  <div class="card-columns m-3">
+    <div *ngFor="let employee of employees$ | async">
+      <div class="card" style="width:280px">
+        <div class="card-header">Employee #{{ employee.id }}</div>
+        <div class="card-body">
+          {{ employee.forename }} {{ employee.surname }}
+          <button
+            class="btn btn-secondary float-right"
+            (click)="deleteEmployeeById(employee.id)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
