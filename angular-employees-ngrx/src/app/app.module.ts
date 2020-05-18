@@ -24,7 +24,6 @@ import { EmployeeStateModule } from './state/employee';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
-      // Retains last 25 states.
       maxAge: 25
     }),
     EmployeeStateModule
